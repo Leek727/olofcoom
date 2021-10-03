@@ -9,6 +9,8 @@ window.configure(background='grey')
 
 path = "olof.png"
 
+#test
+
 #Creates a Tkinter-compatible photo image, which can be used everywhere Tkinter expects an image object.
 img = ImageTk.PhotoImage(Image.open(path))
 
