@@ -3,7 +3,7 @@ import random
 from subprocess import Popen, PIPE
 
 
-olof_perc = int(input("Olof percent per second : "))
+olof_perc = float(input("Olof percent per second : "))
 while True:
     time.sleep(1)
     if random.random() < (olof_perc / 100):
