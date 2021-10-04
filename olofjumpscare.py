@@ -1,7 +1,7 @@
 from PyQt5.QtWidgets import *
 from PyQt5.QtGui import QPixmap
 import sys
- 
+import time
 from PyQt5 import QtGui, QtCore, uic
 from PyQt5 import QtWidgets
 from PyQt5.QtWidgets import QMainWindow, QApplication
@@ -14,6 +14,7 @@ from PyQt5.QtCore import *
 class Window(QMainWindow):
     def __init__(self):
         super().__init__()
+        QtCore.QTimer.singleShot(700, self.close)
 
         self.setWindowFlags(
             QtCore.Qt.WindowStaysOnTopHint |
@@ -35,7 +36,7 @@ class Window(QMainWindow):
         # setting  the geometry of window
         self.setGeometry(0, 0, 1920, 1080)
 
-        self.setWindowOpacity(0.7)
+        self.setWindowOpacity(0.9)
  
         # creating label
         self.label = QLabel(self)
@@ -54,7 +55,6 @@ class Window(QMainWindow):
         # show all the widgets
         self.show()
 
-
     def mousePressEvent(self, event):
         QtWidgets.qApp.quit()
         
@@ -66,5 +66,6 @@ App = QApplication(sys.argv)
 # create the instance of our Window
 window = Window()
 
+#window.show()
 # start the app
-exit(App.exec())
+sys.exit(App.exec())
