@@ -10,7 +10,7 @@ https://github.com/Leek727/olofcoom
 $ pip install -r requirements.txt
 ```
 
-### run the program
+### Run the program
 ```
 python3 olof_timer.py
 ```
